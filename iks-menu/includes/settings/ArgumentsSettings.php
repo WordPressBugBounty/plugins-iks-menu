@@ -136,6 +136,22 @@ class ArgumentsSettings {
                 "depends_on"  => "source",
                 "show_if"     => "taxonomy",
             ],
+            "include_type"             => [
+                "key"         => "include_type",
+                "type"        => SettingsTypes::$select,
+                "label"       => Utils::t( "Include type" ),
+                "options"     => [[
+                    "id"    => "no_children",
+                    "label" => Utils::t( "No children" ),
+                ], [
+                    "id"    => "with_children",
+                    "label" => Utils::t( "With children" ),
+                ]],
+                "description" => Utils::t( "Whether to include terms with children or not." ),
+                "default"     => "no_children",
+                "depends_on"  => "source",
+                "show_if"     => "taxonomy",
+            ],
             "exclude"                  => [
                 "key"         => "exclude",
                 "type"        => SettingsTypes::$text,
@@ -163,7 +179,7 @@ class ArgumentsSettings {
             "show_current_terms_tree"  => [
                 "key"         => "show_current_terms_tree",
                 "type"        => SettingsTypes::$checkbox,
-                "label"       => Utils::t( "Show current terms tree (βETA-version)" ),
+                "label"       => Utils::t( "Show current terms tree" ),
                 "description" => Utils::t( "Allows to retrieve all taxonomy elements that are children of the currently viewing element. The entire menu will be displayed if the currently viewed element has no sub-elements." ),
                 "default"     => false,
                 "depends_on"  => "source",

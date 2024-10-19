@@ -2,9 +2,9 @@
 Contributors: iksstudio, freemius
 Tags: accordion menu, category menu, category widget, woocommerce menu, accordion faqs, taxonomies menu, faq, question, answer
 Requires at least: 4.4.0
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 5.4
-Stable tag: 1.11.3
+Stable tag: 1.12.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -123,6 +123,13 @@ Manual installation method requires downloading the Iks Menu plugin and uploadin
 * Group skins by tags (like flat, white, colored, etc.)
 * Translate plugin into other languages
 
+= 1.12.1 - 2024-10-18 =
+* Fixed: Bug with function redeclare
+
+= 1.12.0 - 2024-10-18 =
+* Added: New setting "Include type"
+* Added: Freemius SDK was updated to the latest version
+
 = 1.11.3 - 2024-06-08 =
 * Added: Freemius SDK was updated to the latest version
 
@@ -143,7 +150,7 @@ Manual installation method requires downloading the Iks Menu plugin and uploadin
 * Fixed: Freemius files
 
 = 1.10.0 - 2023-04-05 =
-* Added: New setting "Show current terms tree (βETA-version)"
+* Added: New setting "Show current terms tree"
 * Added: New setting "Disable empty or hashtag links"
 * Added: Freemius SDK was updated to the latest version
 * Fixed: an error when trying to install the PRO version with the FREE version enabled

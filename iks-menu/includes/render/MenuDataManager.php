@@ -183,6 +183,18 @@ class MenuDataManager {
                 "parent",
                 "childless"
             ] );
+            /**
+             * Include type
+             * @since 1.12.0
+             */
+            $include = $this->settings_manager->get_value( "include" );
+            $include_array = Utils::split_numbers_by_comma_space( $include );
+            $has_include = !empty( $include );
+            $is_include_with_children = $this->settings_manager->get_value( "include_type" ) === "with_children";
+            if ( $has_include && $is_include_with_children ) {
+                // Removing include parameter to "filter" included elements manually (filter_terms_with_children)
+                unset($this->args["include"]);
+            }
             if ( !!$this->settings_manager->get_value( "show_current_terms_tree" ) ) {
                 $queried_term_id = $this->get_queried_object_term_id();
                 if ( $queried_term_id ) {
@@ -206,6 +218,9 @@ class MenuDataManager {
             } else {
                 $terms = get_terms( $taxonomy, $this->args );
             }
+            if ( $has_include && $is_include_with_children ) {
+                $terms = $this->filter_terms_with_children( $terms, $include_array );
+            }
             if ( is_array( $terms ) ) {
                 if ( !empty( $terms ) ) {
                     $index = 0;
@@ -213,8 +228,6 @@ class MenuDataManager {
                     /* Posts */
                     if ( $show_posts ) {
                         $post_type = Utils::get_post_type_by_taxonomy( $taxonomy );
-                        $include = $this->settings_manager->get_value( "include" );
-                        $has_include = !empty( $include );
                         $posts_order_by = $this->settings_manager->get_value( 'posts_order_by' );
                         $posts_order = $this->settings_manager->get_value( 'posts_order' );
                         $posts = get_posts( [
@@ -379,6 +392,37 @@ class MenuDataManager {
             ];
             $index++;
         }
+    }
+
+    private function add_element_and_descendants( $element, &$filtered_elements, $elements ) {
+        foreach ( $filtered_elements as $filtered_element ) {
+            // skip, if element already added
+            if ( $filtered_element->term_id == $element->term_id ) {
+                return;
+            }
+        }
+        $filtered_elements[] = $element;
+        // add parent element
+        foreach ( $elements as $child_element ) {
+            // add all children
+            if ( $child_element->parent == $element->term_id ) {
+                $this->add_element_and_descendants( $child_element, $filtered_elements, $elements );
+            }
+        }
+    }
+
+    /**
+     * Filter terms with children
+     * @since 1.8.0
+     */
+    private function filter_terms_with_children( $elements, $ids_to_keep ) {
+        $result = [];
+        foreach ( $elements as $element ) {
+            if ( in_array( $element->term_id, $ids_to_keep ) ) {
+                $this->add_element_and_descendants( $element, $result, $elements );
+            }
+        }
+        return $result;
     }
 
     /**

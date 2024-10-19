@@ -32,7 +32,7 @@ class UtilsLocal {
 			],
 			[
 				"id"    => "faqs",
-				"label" => Utils::t( "FAQs (βETA-version)" ),
+				"label" => Utils::t( "FAQs" ),
 			],
 		];
 	}
