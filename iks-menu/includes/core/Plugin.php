@@ -185,7 +185,7 @@ class Plugin {
 		self::$slug                 = $slug;
 		self::$shortcodes           = $shortcodes;
 		self::$post_type            = $post_type;
-		self::$version              = get_plugin_data( $main_file )['Version'];
+		self::$version              = get_plugin_data( $main_file, true, false )['Version'];
 		self::$supported_WP_version = $supported_WP_version;
 		self::$skins_servers        = $skins_servers;
 		self::$public_scripts       = $public_scripts;

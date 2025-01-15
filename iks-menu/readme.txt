@@ -1,10 +1,10 @@
 === Iks Menu - WordPress Category Accordion Menu & FAQs ===
 Contributors: iksstudio, freemius
-Tags: accordion menu, category menu, category widget, woocommerce menu, accordion faqs, taxonomies menu, faq, question, answer
+Tags: accordion menu, taxonomies menu, category widget, woocommerce menu, faqs list
 Requires at least: 4.4.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 1.12.1
+Stable tag: 1.12.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -122,6 +122,9 @@ Manual installation method requires downloading the Iks Menu plugin and uploadin
 * Loading menus by AJAX
 * Group skins by tags (like flat, white, colored, etc.)
 * Translate plugin into other languages
+
+= 1.12.2 - 2025-01-15 =
+* Fixed: i18n warning in WordPress 6.7 (adapting to changes)
 
 = 1.12.1 - 2024-10-18 =
 * Fixed: Bug with function redeclare
