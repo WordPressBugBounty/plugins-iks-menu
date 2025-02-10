@@ -4,7 +4,7 @@ Tags: accordion menu, taxonomies menu, category widget, woocommerce menu, faqs l
 Requires at least: 4.4.0
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 1.12.2
+Stable tag: 1.12.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -122,6 +122,12 @@ Manual installation method requires downloading the Iks Menu plugin and uploadin
 * Loading menus by AJAX
 * Group skins by tags (like flat, white, colored, etc.)
 * Translate plugin into other languages
+
+= 1.12.4 - 2025-02-10 =
+* Added: Support for custom CSS Classes (for Custom Menus)
+
+= 1.12.3 - 2025-01-30 =
+* Added: Freemius SDK was updated to the latest version
 
 = 1.12.2 - 2025-01-15 =
 * Fixed: i18n warning in WordPress 6.7 (adapting to changes)

@@ -131,6 +131,10 @@ class MenuRenderer {
         $classes .= ( $is_post ? RenderUtils::sub_class( $class, "is-post" ) : "" );
         $classes .= ( $sub_type ? RenderUtils::sub_class( $class, $sub_type ) : "" );
         $classes .= ( $disable_links ? RenderUtils::sub_class( $class, "link-disabled" ) : "" );
+        // Custom classes
+        $custom_classes = array_filter( $term["classes"], 'strlen' );
+        $has_custom_classes = count( $custom_classes ) > 0;
+        $classes .= ( $has_custom_classes ? " " . implode( " ", $term["classes"] ) : "" );
         // Expansion
         if ( Utils::get( $term, "is_expanded" ) ) {
             $classes .= RenderUtils::sub_class( $class, "expanded" );

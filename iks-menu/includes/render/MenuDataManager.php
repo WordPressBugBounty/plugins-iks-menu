@@ -155,6 +155,7 @@ class MenuDataManager {
                         "posts_count"           => null,
                         "is_post"               => false,
                         "target"                => $item->target,
+                        "classes"               => $item->classes,
                     ];
                     $this->data[] = $item_data;
                 }
@@ -272,6 +273,7 @@ class MenuDataManager {
                             "posts_count"           => $term->count,
                             "is_post"               => false,
                             "target"                => null,
+                            "classes"               => null,
                         ];
                         $index++;
                         $this->data[] = $term_data;
@@ -297,6 +299,7 @@ class MenuDataManager {
                                         "posts_count"           => false,
                                         "is_post"               => true,
                                         "target"                => null,
+                                        "classes"               => null,
                                     ];
                                     $index++;
                                 }
@@ -371,6 +374,7 @@ class MenuDataManager {
                 "is_post"               => true,
                 "sub_type"              => "faq_question",
                 "target"                => null,
+                "classes"               => null,
             ];
             // Answer
             $index++;
@@ -389,6 +393,7 @@ class MenuDataManager {
                 "is_post"               => true,
                 "sub_type"              => "faq_answer",
                 "target"                => null,
+                "classes"               => null,
             ];
             $index++;
         }
