@@ -4,7 +4,7 @@ Tags: accordion menu, taxonomies menu, category widget, woocommerce menu, faqs l
 Requires at least: 4.4.0
 Tested up to: 6.7
 Requires PHP: 5.4
-Stable tag: 1.12.4
+Stable tag: 1.12.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -122,6 +122,9 @@ Manual installation method requires downloading the Iks Menu plugin and uploadin
 * Loading menus by AJAX
 * Group skins by tags (like flat, white, colored, etc.)
 * Translate plugin into other languages
+
+= 1.12.5 - 2025-02-11 =
+* Fixed: bug in PHP 8.0+
 
 = 1.12.4 - 2025-02-10 =
 * Added: Support for custom CSS Classes (for Custom Menus)
