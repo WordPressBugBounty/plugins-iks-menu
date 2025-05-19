@@ -13,7 +13,7 @@
  * @wordpress-plugin
  * Plugin Name:       Iks Menu
  * Description:       Super Customizable Accordion Menu. Was made with attention to details.
- * Version:           1.12.5
+ * Version:           1.12.6
  * Author:            IksStudio
  * Author URI:        https://iks-menu.com
  * Text Domain:       iksm

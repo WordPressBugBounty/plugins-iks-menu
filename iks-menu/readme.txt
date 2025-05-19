@@ -2,9 +2,9 @@
 Contributors: iksstudio, freemius
 Tags: accordion menu, taxonomies menu, category widget, woocommerce menu, faqs list
 Requires at least: 4.4.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.4
-Stable tag: 1.12.5
+Stable tag: 1.12.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -122,6 +122,9 @@ Manual installation method requires downloading the Iks Menu plugin and uploadin
 * Loading menus by AJAX
 * Group skins by tags (like flat, white, colored, etc.)
 * Translate plugin into other languages
+
+= 1.12.6 - 2025-05-19 =
+* Added: Freemius SDK was updated to the latest version
 
 = 1.12.5 - 2025-02-11 =
 * Fixed: bug in PHP 8.0+
