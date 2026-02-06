@@ -223,6 +223,18 @@ class MenuDataManager {
                 $terms = $this->filter_terms_with_children( $terms, $include_array );
             }
             if ( is_array( $terms ) ) {
+                $hide_empty = $this->settings_manager->get_value( 'hide_empty' );
+                $in_stock_only = $this->settings_manager->get_value( 'in_stock_only' );
+                // Filtering empty terms (count = 0), when in_stock_only enabled
+                if ( $hide_empty && $in_stock_only ) {
+                    $filtered_terms = [];
+                    foreach ( $terms as $term ) {
+                        if ( $term->count ) {
+                            $filtered_terms[] = $term;
+                        }
+                    }
+                    $terms = $filtered_terms;
+                }
                 if ( !empty( $terms ) ) {
                     $index = 0;
                     $show_posts = $this->settings_manager->get_value( "show_posts" );
@@ -242,6 +254,10 @@ class MenuDataManager {
                                 'terms'    => ( $has_include ? Utils::get_terms_ids( $terms ) : [] ),
                             ]],
                             'suppress_filters' => false,
+                            'meta_query'       => ( $in_stock_only ? [[
+                                'key'   => '_stock_status',
+                                'value' => 'instock',
+                            ]] : false ),
                         ] );
                         $posts_by_terms = [];
                         foreach ( $posts as $post ) {

@@ -2,9 +2,9 @@
 Contributors: iksstudio, freemius
 Tags: accordion menu, taxonomies menu, category widget, woocommerce menu, faqs list
 Requires at least: 4.4.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 5.4
-Stable tag: 1.12.6
+Stable tag: 1.12.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -112,16 +112,10 @@ Manual installation method requires downloading the Iks Menu plugin and uploadin
 
 == Changelog ==
 
-= SCHEDULED =
-* Ability to sort custom WP menus
-* Ability to order content (link, image, toggle, etc.)
-* Ability to add badges for menu items
-* Search for terms
-* Customizing widget area (header, content, etc.)
-* Shortcode attributes
-* Loading menus by AJAX
-* Group skins by tags (like flat, white, colored, etc.)
-* Translate plugin into other languages
+= 1.12.7 - 2026-01-15 =
+* Added: Freemius SDK was updated to the latest version
+* Added: New option "Menu order" for "Posts: Order by" setting
+* Added: New option "In stock only" to filter out of stock products
 
 = 1.12.6 - 2025-05-19 =
 * Added: Freemius SDK was updated to the latest version

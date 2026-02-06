@@ -22,8 +22,7 @@ use IksStudio\IKSM_CORE\utils\Utils;
 class ImproverUtils {
 
 	public static function get_image_picker_label() {
-		$plugin_name = Plugin::$name;
-		return Utils::t( "Image ($plugin_name)", true );
+		return Utils::t( "Image", true );
 	}
 
 	public static function render_image( $url, $width, $class = "" ) {

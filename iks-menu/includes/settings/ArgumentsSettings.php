@@ -90,6 +90,16 @@ class ArgumentsSettings {
                 "depends_on"  => "show_posts",
                 "show_if"     => true,
             ],
+            "in_stock_only"            => [
+                "key"         => "in_stock_only",
+                "type"        => SettingsTypes::$checkbox,
+                "label"       => Utils::t( "In stock only" ),
+                "description" => Utils::t( "If enabled - Out of stock Products & Categories will be hidden" ),
+                "default"     => false,
+                "depends_on"  => "taxonomy",
+                "show_if"     => "product_cat",
+                "pro_only"    => true,
+            ],
             "hide_empty"               => [
                 "key"         => "hide_empty",
                 "type"        => SettingsTypes::$checkbox,
@@ -298,6 +308,11 @@ class ArgumentsSettings {
                 "label" => Utils::t( "Date modified" ),
             ],
             [
+                "id"    => "menu_order",
+                "label" => "Menu order",
+            ],
+            // @since 1.12.7
+            [
                 "id"    => "author",
                 "label" => "Author",
             ],
@@ -316,7 +331,7 @@ class ArgumentsSettings {
             [
                 "id"    => "comment_count",
                 "label" => Utils::t( "Comment count" ),
-            ]
+            ],
         ];
     }
 
