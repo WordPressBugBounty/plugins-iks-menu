@@ -2,7 +2,7 @@
 Contributors: iksstudio, freemius
 Tags: accordion menu, taxonomies menu, category widget, woocommerce menu, faqs list
 Requires at least: 4.4.0
-Tested up to: 6.9
+Tested up to: 7.1
 Requires PHP: 5.4
 Stable tag: 1.12.7
 License: GPLv3
